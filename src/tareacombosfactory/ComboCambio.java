@@ -10,5 +10,15 @@ package tareacombosfactory;
  * @author Gloriana
  */
 public class ComboCambio implements ICombo {
+
+    @Override
+    public ICombo clone() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ICombo deepClone() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

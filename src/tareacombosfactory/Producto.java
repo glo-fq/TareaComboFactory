@@ -10,8 +10,33 @@ package tareacombosfactory;
  * @author Gloriana
  */
 public class Producto {
-    private int codigo;
+    private  int codigo;
     private String nombre;
-    private int precio;
+    private float precio;
+    
+    public Producto(int c, String n, float p){
+        this.codigo=c;
+        this.nombre=n;
+        this.precio=p;
+    }
+    public int getCodigo(){
+        return codigo;
+    }
+    public String getNombre(){
+        return nombre;
+    }
+    public float getPrecio(){
+        return precio;
+    }
+    public void setCodigo(int c){
+        this.codigo=c;
+    }
+    public void setNombre (String n){
+        this.nombre=n;
+    }
+    public void setPrecio(Float p){
+        this.precio=p;
+    }
+    
     
 }

@@ -9,7 +9,7 @@ package tareacombosfactory;
  *
  * @author Gloriana
  */
-public interface ICombo {
-    public ICombo clone();
-    public ICombo deepClone();
+public interface ICombo<T extends ICombo> extends Cloneable {
+    public T clone();
+    public T deepClone();
 }

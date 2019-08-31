@@ -11,6 +11,8 @@ package tareacombosfactory;
  */
 public class SupremeFactory implements IComboFactoryMethod {
     
-    public Combo crearCombo(){}
+    public Combo crearCombo(){
+        
+    }
     
 }
