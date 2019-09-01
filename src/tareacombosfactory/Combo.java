@@ -30,11 +30,22 @@ public class Combo {
         public ArrayList<Adicional> getAdicionales(){
         return adicionales;
     }
+    public void setPlato(Plato p){
+        this.plato=p;
+    }
+    public void setBebidas(ArrayList<Bebida> b){
+        this.bebidas=b;
+    }
+    public void setAdicionales (ArrayList<Adicional> a){
+        this.adicionales=a;
+    }
     
-    public class ComboBuilder implements IBuilder{
+    public static class ComboBuilder implements IBuilder<Combo>{
         private Plato plato;
         private ArrayList<Bebida> bebidas;
         private ArrayList<Adicional> adicionales;
+        public ComboBuilder(){
+        }
         @Override
         public Combo build(){
             return new Combo(plato, bebidas, adicionales);
@@ -46,12 +57,12 @@ public class Combo {
             return this;
         }
         
-        public ComboBuilder addBebida(Bebida b){
-            this.bebidas.add(b);
+        public ComboBuilder addBebida(ArrayList<Bebida> b){
+            this.bebidas.addAll(b);
             return this;}
         
-        public ComboBuilder addAdicional(Adicional a){
-            this.adicionales.add(a);
+        public ComboBuilder addAdicional(ArrayList<Adicional> a){
+            this.adicionales.addAll(a);
             return this;
         }
 

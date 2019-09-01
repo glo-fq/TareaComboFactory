@@ -12,9 +12,13 @@ import java.util.ArrayList;
  * @author Gloriana
  */
 public class ComboPredefinido extends Combo implements ICombo<ComboPredefinido> {
-    
+    private String name;
+
     public ComboPredefinido(Plato p, ArrayList<Bebida> b, ArrayList<Adicional> a){
         super(p,b,a);
+    }
+    public void setName(String n){
+        this.name=n;
     }
     
     @Override
@@ -26,6 +30,7 @@ public class ComboPredefinido extends Combo implements ICombo<ComboPredefinido> 
 
     @Override
     public ComboPredefinido deepClone() {
+     
         ArrayList<Bebida> cloneBebidas = new ArrayList<Bebida>();
         ArrayList<Adicional> cloneAdicionales = new ArrayList<Adicional>();
         Plato p = this. getPlato();
