@@ -14,21 +14,23 @@ import tareacombosfactory.Combo.ComboBuilder;
  */
 public class SupremeFactory implements IComboFactoryMethod {
     
-    public Combo crearCombo(String tipo,Combo c,Plato p, ArrayList<Bebida> b, ArrayList<Adicional> a, String newName){
+    public Combo crearCombo(String tipo,Integer numCombo,Plato p, ArrayList<Bebida> b, ArrayList<Adicional> a, Integer newNumCombo){
         if (tipo=="al gusto"){
-           Combo ca = new Combo.ComboBuilder().addAdicional(a).addBebida(b).build();
-           return ca;
+           ComboAlGusto cg = new ComboAlGusto();
+           return cg.newCombo(p, b, a);
+           
         }
         else if(tipo=="cambio"){
-            Combo ca = new Combo.ComboBuilder().addAdicional(a).addBebida(b).build1(c);
-            return ca;
+            ComboPredefinido predefinido = (ComboPredefinido) ComboFactory.getPrototype(numCombo);
+            ComboCambio cc= new ComboCambio();
+            return cc.CambiarCombo(predefinido,b,a);
         }else {
-            ComboPredefinido predefinido = (ComboPredefinido) ComboFactory.getPrototype(tipo);
-            predefinido.setName(newName);
+            ComboPredefinido predefinido = (ComboPredefinido) ComboFactory.getPrototype(numCombo);
+            predefinido.setName(newNumCombo);
             predefinido.setPlato(p);
             predefinido.setAdicionales(a);
             predefinido.setBebidas(b);
-            ComboFactory.addPrototype(newName, predefinido);
+            ComboFactory.addPrototype(newNumCombo, predefinido);
             return predefinido;
         }
         

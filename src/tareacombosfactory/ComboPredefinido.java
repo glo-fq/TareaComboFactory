@@ -12,13 +12,13 @@ import java.util.ArrayList;
  * @author Gloriana
  */
 public class ComboPredefinido extends Combo implements ICombo<ComboPredefinido> {
-    private String name;
+    private Integer num;
 
     public ComboPredefinido(Plato p, ArrayList<Bebida> b, ArrayList<Adicional> a){
         super(p,b,a);
     }
-    public void setName(String n){
-        this.name=n;
+    public void setName(Integer n){
+        this.num=n;
     }
     
     @Override

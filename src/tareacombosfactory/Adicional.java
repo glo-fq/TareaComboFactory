@@ -9,7 +9,7 @@ package tareacombosfactory;
  *
  * @author Gloriana
  */
-public class Adicional extends Producto implements ICombo {
+public class Adicional extends Producto implements ICombo<Adicional> {
     
     public Adicional(int codigo, String nombre, float precio){
         super(codigo,nombre,precio);
