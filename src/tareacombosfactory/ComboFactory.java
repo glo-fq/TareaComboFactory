@@ -5,14 +5,20 @@
  */
 package tareacombosfactory;
 
+import java.util.HashMap;
+
 /**
  *
  * @author Gloriana
  */
 public class ComboFactory {
+    private static HashMap<String, ICombo> prototypes = new HashMap<>();
     
-    public ICombo getPrototype(){
-        
+    public static ICombo getPrototype(String prototypeName){
+        return prototypes.get(prototypeName).deepClone();
+    }
+    public static void addPrototype (String prototypeName, ICombo prototype){
+        prototypes.put(prototypeName, prototype);
     }
     
 }

@@ -5,11 +5,13 @@
  */
 package tareacombosfactory;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Gloriana
  */
 public interface IComboFactoryMethod {
     
-    public Combo crearCombo();
+    public Combo crearCombo(String tipo,Combo c,Plato p, ArrayList<Bebida> b, ArrayList<Adicional> a, String newName);
 }
