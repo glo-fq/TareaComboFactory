@@ -9,7 +9,7 @@ package tareacombosfactory;
  *
  * @author Gloriana
  */
-public class Bebida extends Producto implements ICombo{
+public class Bebida extends Producto implements ICombo<Bebida>{
     
     /**
      *

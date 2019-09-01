@@ -12,12 +12,12 @@ import java.util.HashMap;
  * @author Gloriana
  */
 public class ComboFactory {
-    private static HashMap<String, ICombo> prototypes = new HashMap<>();
+    private static HashMap<Integer, ICombo> prototypes = new HashMap<>();
     
-    public static ICombo getPrototype(String prototypeName){
+    public static ICombo getPrototype(Integer prototypeName){
         return prototypes.get(prototypeName).deepClone();
     }
-    public static void addPrototype (String prototypeName, ICombo prototype){
+    public static void addPrototype (Integer prototypeName, ICombo prototype){
         prototypes.put(prototypeName, prototype);
     }
     

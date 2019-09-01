@@ -21,6 +21,7 @@ public class Combo {
         this.bebidas=b;
         this.adicionales=a;
     }
+    public Combo(){}
     public Plato getPlato(){
         return plato;
     }
