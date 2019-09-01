@@ -33,7 +33,7 @@ public class ComboPredefinido extends Combo implements ICombo<ComboPredefinido> 
      
         ArrayList<Bebida> cloneBebidas = new ArrayList<Bebida>();
         ArrayList<Adicional> cloneAdicionales = new ArrayList<Adicional>();
-        Plato p = this. getPlato();
+        Plato p1 = this.getPlato().clone();
         for(Bebida item: getBebidas()){
             Bebida cloneItem = item.clone();
             cloneBebidas.add(cloneItem);
@@ -42,7 +42,7 @@ public class ComboPredefinido extends Combo implements ICombo<ComboPredefinido> 
             Adicional cloneItem = item.clone();
             cloneAdicionales.add(cloneItem);
         }
-        ComboPredefinido clone = new ComboPredefinido(p, cloneBebidas,cloneAdicionales);
+        ComboPredefinido clone = new ComboPredefinido(p1, cloneBebidas,cloneAdicionales);
         return clone;
       //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
