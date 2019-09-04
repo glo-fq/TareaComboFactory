@@ -129,20 +129,24 @@
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btnPlato5" min="-2" pref="96" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnPlato6" min="-2" pref="96" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnPlato7" min="-2" pref="96" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="btnPlato1" max="32767" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnPlato2" min="-2" pref="96" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnPlato3" min="-2" pref="96" max="-2" attributes="0"/>
+                                      <Component id="btnPlato5" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnPlato6" min="-2" pref="96" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnPlato7" min="-2" pref="96" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                          <Component id="btnPlato2" min="-2" pref="96" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnPlato3" min="-2" pref="96" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
                           </Group>
@@ -300,8 +304,10 @@
           <SubComponents>
             <Component class="javax.swing.JTextArea" name="txtAreaFactura">
               <Properties>
+                <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" value="Combo 1        3900&#xa;Hamburguesa    1200&#xa;Gaseosa         800&#xa;Caf&#xe9;            500&#xa;Tres leches     800&#xa;Pur&#xe9;            600&#xa;&#xa;Combo 2        2600&#xa;Hamburguesa    1200&#xa;Gaseosa         800&#xa;Papas           600&#xa;"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -348,22 +354,18 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnPlato1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Plato 1"/>
+            <Property name="text" type="java.lang.String" value="Hamburguesa"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlato1ActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JButton(hamburger)"/>
-            <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="ImageIcon hamburger = new ImageIcon(&quot;hamburger.jpg&quot;);"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="btnPlato2">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Plato 2"/>
+            <Property name="text" type="java.lang.String" value="Sandwich"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlato2ActionPerformed"/>
@@ -371,10 +373,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnPlato3">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Plato 3"/>
+            <Property name="text" type="java.lang.String" value="Pollo"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlato3ActionPerformed"/>
@@ -382,10 +381,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnPlato5">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Plato 4"/>
+            <Property name="text" type="java.lang.String" value="Wrap"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlato5ActionPerformed"/>
@@ -393,10 +389,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnPlato6">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Plato 5"/>
+            <Property name="text" type="java.lang.String" value="Pizza"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlato6ActionPerformed"/>
@@ -404,10 +397,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnPlato7">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Plato 6"/>
+            <Property name="text" type="java.lang.String" value="Hot dog"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlato7ActionPerformed"/>
@@ -415,7 +405,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnBebida1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Bebida 1"/>
+            <Property name="text" type="java.lang.String" value="Gaseosa"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBebida1ActionPerformed"/>
@@ -423,7 +413,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnBebida2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Bebida 2"/>
+            <Property name="text" type="java.lang.String" value="Caf&#xe9;"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBebida2ActionPerformed"/>
@@ -431,7 +421,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnBebida3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Bebida 3"/>
+            <Property name="text" type="java.lang.String" value="T&#xe9;"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBebida3ActionPerformed"/>
@@ -439,7 +429,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnBebida4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Bebida 4"/>
+            <Property name="text" type="java.lang.String" value="Natural"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBebida4ActionPerformed"/>
@@ -447,7 +437,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnBebida5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Bebida 5"/>
+            <Property name="text" type="java.lang.String" value="Frozen"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBebida5ActionPerformed"/>
@@ -455,7 +445,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnBebida6">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Bebida 6"/>
+            <Property name="text" type="java.lang.String" value="Batido"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBebida6ActionPerformed"/>
@@ -463,7 +453,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnAdicional1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Adicional 1"/>
+            <Property name="text" type="java.lang.String" value="Papas"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdicional1ActionPerformed"/>
@@ -471,7 +461,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnAdicional2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Adicional 2"/>
+            <Property name="text" type="java.lang.String" value="Uvas"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdicional2ActionPerformed"/>
@@ -479,7 +469,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnAdicional3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Adicional 3"/>
+            <Property name="text" type="java.lang.String" value="Patatas"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdicional3ActionPerformed"/>
@@ -487,7 +477,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnAdicional4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Adicional 4"/>
+            <Property name="text" type="java.lang.String" value="Ma&#xed;z"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdicional4ActionPerformed"/>
@@ -495,7 +485,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnAdicional5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Adicional 5"/>
+            <Property name="text" type="java.lang.String" value="Tres leches"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdicional5ActionPerformed"/>
@@ -503,7 +493,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnAdicional6">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Adicional 6"/>
+            <Property name="text" type="java.lang.String" value="Ensalada"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdicional6ActionPerformed"/>
@@ -511,7 +501,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnAdicional7">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Adicional 7"/>
+            <Property name="text" type="java.lang.String" value="Pur&#xe9;"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdicional7ActionPerformed"/>

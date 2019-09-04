@@ -5,6 +5,8 @@
  */
 package interfaz;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Gloriana
@@ -44,8 +46,7 @@ public class VentanaCombos extends javax.swing.JFrame {
         btnPredefinido3 = new javax.swing.JButton();
         btnPredefinido4 = new javax.swing.JButton();
         btnPredefinido5 = new javax.swing.JButton();
-        ImageIcon hamburger = new ImageIcon("hamburger.jpg");
-        btnPlato1 = new javax.swing.JButton(hamburger);
+        btnPlato1 = new javax.swing.JButton();
         btnPlato2 = new javax.swing.JButton();
         btnPlato3 = new javax.swing.JButton();
         btnPlato5 = new javax.swing.JButton();
@@ -103,8 +104,10 @@ public class VentanaCombos extends javax.swing.JFrame {
         lblMontoTotal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblMontoTotal.setText("0");
 
+        txtAreaFactura.setEditable(false);
         txtAreaFactura.setColumns(20);
         txtAreaFactura.setRows(5);
+        txtAreaFactura.setText("Combo 1        3900\nHamburguesa    1200\nGaseosa         800\nCafé            500\nTres leches     800\nPuré            600\n\nCombo 2        2600\nHamburguesa    1200\nGaseosa         800\nPapas           600\n");
         jScrollPane2.setViewportView(txtAreaFactura);
 
         btnPredefinido2.setText("Predef 2");
@@ -142,138 +145,133 @@ public class VentanaCombos extends javax.swing.JFrame {
             }
         });
 
-        btnPlato1.setText("Plato 1");
+        btnPlato1.setText("Hamburguesa");
         btnPlato1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPlato1ActionPerformed(evt);
             }
         });
 
-        btnPlato2.setBackground(java.awt.Color.white);
-        btnPlato2.setText("Plato 2");
+        btnPlato2.setText("Sandwich");
         btnPlato2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPlato2ActionPerformed(evt);
             }
         });
 
-        btnPlato3.setBackground(java.awt.Color.white);
-        btnPlato3.setText("Plato 3");
+        btnPlato3.setText("Pollo");
         btnPlato3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPlato3ActionPerformed(evt);
             }
         });
 
-        btnPlato5.setBackground(java.awt.Color.white);
-        btnPlato5.setText("Plato 4");
+        btnPlato5.setText("Wrap");
         btnPlato5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPlato5ActionPerformed(evt);
             }
         });
 
-        btnPlato6.setBackground(java.awt.Color.white);
-        btnPlato6.setText("Plato 5");
+        btnPlato6.setText("Pizza");
         btnPlato6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPlato6ActionPerformed(evt);
             }
         });
 
-        btnPlato7.setBackground(java.awt.Color.white);
-        btnPlato7.setText("Plato 6");
+        btnPlato7.setText("Hot dog");
         btnPlato7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPlato7ActionPerformed(evt);
             }
         });
 
-        btnBebida1.setText("Bebida 1");
+        btnBebida1.setText("Gaseosa");
         btnBebida1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBebida1ActionPerformed(evt);
             }
         });
 
-        btnBebida2.setText("Bebida 2");
+        btnBebida2.setText("Café");
         btnBebida2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBebida2ActionPerformed(evt);
             }
         });
 
-        btnBebida3.setText("Bebida 3");
+        btnBebida3.setText("Té");
         btnBebida3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBebida3ActionPerformed(evt);
             }
         });
 
-        btnBebida4.setText("Bebida 4");
+        btnBebida4.setText("Natural");
         btnBebida4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBebida4ActionPerformed(evt);
             }
         });
 
-        btnBebida5.setText("Bebida 5");
+        btnBebida5.setText("Frozen");
         btnBebida5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBebida5ActionPerformed(evt);
             }
         });
 
-        btnBebida6.setText("Bebida 6");
+        btnBebida6.setText("Batido");
         btnBebida6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBebida6ActionPerformed(evt);
             }
         });
 
-        btnAdicional1.setText("Adicional 1");
+        btnAdicional1.setText("Papas");
         btnAdicional1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdicional1ActionPerformed(evt);
             }
         });
 
-        btnAdicional2.setText("Adicional 2");
+        btnAdicional2.setText("Uvas");
         btnAdicional2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdicional2ActionPerformed(evt);
             }
         });
 
-        btnAdicional3.setText("Adicional 3");
+        btnAdicional3.setText("Patatas");
         btnAdicional3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdicional3ActionPerformed(evt);
             }
         });
 
-        btnAdicional4.setText("Adicional 4");
+        btnAdicional4.setText("Maíz");
         btnAdicional4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdicional4ActionPerformed(evt);
             }
         });
 
-        btnAdicional5.setText("Adicional 5");
+        btnAdicional5.setText("Tres leches");
         btnAdicional5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdicional5ActionPerformed(evt);
             }
         });
 
-        btnAdicional6.setText("Adicional 6");
+        btnAdicional6.setText("Ensalada");
         btnAdicional6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdicional6ActionPerformed(evt);
             }
         });
 
-        btnAdicional7.setText("Adicional 7");
+        btnAdicional7.setText("Puré");
         btnAdicional7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdicional7ActionPerformed(evt);
@@ -354,19 +352,21 @@ public class VentanaCombos extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(btnPlato5, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(btnPlato6, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(btnPlato7, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(btnPlato1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(btnPlato2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(btnPlato3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(btnPlato5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnPlato6, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnPlato7, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(btnPlato2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnPlato3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(29, 29, 29))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -609,7 +609,7 @@ public class VentanaCombos extends javax.swing.JFrame {
     private javax.swing.JButton btnBebida4;
     private javax.swing.JButton btnBebida5;
     private javax.swing.JButton btnBebida6;
-    private javax.swing.JButton btnPlato1;
+    public javax.swing.JButton btnPlato1;
     private javax.swing.JButton btnPlato2;
     private javax.swing.JButton btnPlato3;
     private javax.swing.JButton btnPlato4;
