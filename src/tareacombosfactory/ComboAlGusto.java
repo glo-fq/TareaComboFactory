@@ -11,13 +11,11 @@ import java.util.ArrayList;
  *
  * @author maryp
  */
-public class ComboCambio extends Combo {
-    public ComboCambio(){
-    
+public class ComboAlGusto extends Combo {
+    public ComboAlGusto(){
     }
-    public Combo CambiarCombo(Combo c, ArrayList<Bebida> b, ArrayList<Adicional> a){
-         Combo ca = new Combo.ComboBuilder().addAdicional(a).addBebida(b).build1(c);
-         return ca;
+    public Combo newCombo(Plato p, ArrayList<Bebida> b, ArrayList<Adicional> a){
+        Combo ca= new Combo.ComboBuilder().setPlato(p).addAdicional(a).addBebida(b).build();
+        return ca;
     }
-    
 }

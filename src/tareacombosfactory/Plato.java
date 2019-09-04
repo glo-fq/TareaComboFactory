@@ -9,6 +9,21 @@ package tareacombosfactory;
  *
  * @author Gloriana
  */
-public class Plato extends Producto {
-    
+public class Plato extends Producto implements ICombo<Plato>
+{
+    public Plato(int codigo, String nombre, float precio){
+            super(codigo,nombre,precio);
+    }
+
+    @Override
+    public Plato clone() {
+        return new Plato(this.getCodigo(),this.getNombre(),this.getPrecio());
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Plato deepClone() {
+        return clone();
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
