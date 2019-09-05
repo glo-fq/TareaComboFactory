@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class ComboPredefinido extends Combo implements ICombo<ComboPredefinido> {
     private Integer num;
 
-    public ComboPredefinido(Plato p, ArrayList<Bebida> b, ArrayList<Adicional> a){
+    public ComboPredefinido(Producto p, ArrayList<Producto> b, ArrayList<Producto> a){
         super(p,b,a);
     }
     public void setName(Integer n){
@@ -31,15 +31,15 @@ public class ComboPredefinido extends Combo implements ICombo<ComboPredefinido> 
     @Override
     public ComboPredefinido deepClone() {
      
-        ArrayList<Bebida> cloneBebidas = new ArrayList<Bebida>();
-        ArrayList<Adicional> cloneAdicionales = new ArrayList<Adicional>();
-        Plato p1 = this.getPlato().clone();
-        for(Bebida item: getBebidas()){
-            Bebida cloneItem = item.clone();
+        ArrayList<Producto> cloneBebidas = new ArrayList<Producto>();
+        ArrayList<Producto> cloneAdicionales = new ArrayList<Producto>();
+        Producto p1 = this.getPlato().clone();
+        for(Producto item: getBebidas()){
+            Producto cloneItem = item.clone();
             cloneBebidas.add(cloneItem);
         }
-        for(Adicional item: getAdicionales()){
-            Adicional cloneItem = item.clone();
+        for(Producto item: getAdicionales()){
+            Producto cloneItem = item.clone();
             cloneAdicionales.add(cloneItem);
         }
         ComboPredefinido clone = new ComboPredefinido(p1, cloneBebidas,cloneAdicionales);

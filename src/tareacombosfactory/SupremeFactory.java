@@ -14,7 +14,7 @@ import tareacombosfactory.Combo.ComboBuilder;
  */
 public class SupremeFactory implements IComboFactoryMethod {
     
-    public Combo crearCombo(String tipo,Integer numCombo,Plato p, ArrayList<Bebida> b, ArrayList<Adicional> a, Integer newNumCombo){
+    public Combo crearCombo(String tipo,Integer numCombo,Producto p, ArrayList<Producto> b, ArrayList<Producto> a, Integer newNumCombo){
         if (tipo=="al gusto"){
            ComboAlGusto cg = new ComboAlGusto();
            return cg.newCombo(p, b, a);
@@ -25,13 +25,20 @@ public class SupremeFactory implements IComboFactoryMethod {
             ComboCambio cc= new ComboCambio();
             return cc.CambiarCombo(predefinido,b,a);
         }else {
-            ComboPredefinido predefinido = (ComboPredefinido) ComboFactory.getPrototype(numCombo);
-            predefinido.setName(newNumCombo);
-            predefinido.setPlato(p);
-            predefinido.setAdicionales(a);
-            predefinido.setBebidas(b);
-            ComboFactory.addPrototype(newNumCombo, predefinido);
-            return predefinido;
+            if (newNumCombo==0){
+               ComboPredefinido predefinido = new ComboPredefinido(p,b,a);
+               predefinido.setName(numCombo);
+               ComboFactory.addPrototype(newNumCombo, predefinido);
+               return predefinido;
+            }
+            else{
+                ComboPredefinido predefinido = (ComboPredefinido) ComboFactory.getPrototype(numCombo);
+                predefinido.setName(newNumCombo);
+                predefinido.setPlato(p);
+                predefinido.setAdicionales(a);
+                predefinido.setBebidas(b);
+                ComboFactory.addPrototype(newNumCombo, predefinido);
+                return predefinido;}
         }
         
     }

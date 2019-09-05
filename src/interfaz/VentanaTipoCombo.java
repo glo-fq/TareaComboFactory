@@ -5,19 +5,66 @@
  */
 package interfaz;
 
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
+import javax.swing.JRadioButton;
+import tareacombosfactory.Combo;
+import tareacombosfactory.ComboFactory;
+import tareacombosfactory.ICombo;
+import tareacombosfactory.Producto;
+
 /**
  *
  * @author Gloriana
  */
 public class VentanaTipoCombo extends javax.swing.JFrame {
-
+    ArrayList<Combo> compra;
     /**
      * Creates new form VentanaTipoCombo
      */
     public VentanaTipoCombo() {
         initComponents();
+        añadirCombos();
+        añadirPlatos();
+       // this.add(jScrollPane1);
+       // this.add(jScrollPane2);
+       // this.revalidate();
+       // this.repaint();
+        
     }
+    public void añadirCombos(){
+        DefaultListModel model = new DefaultListModel<>();
+        for (Combo item: VentanaCombos.combos){
+        String texto = item.getPlato().getNombre();
+                for (Producto b: item.getBebidas()){
+                   texto+=", "+b.getNombre();
+                }
+                for (Producto a: item.getAdicionales()){
+                    texto+=", "+a.getNombre();
+                }
+         texto+=", "+item.getTotal();  
+         model.addElement(texto);
+     
+        }
+        jList2.setModel(model);
 
+    }
+    public void añadirPlatos(){
+        DefaultListModel model = new DefaultListModel<>();
+        for (Producto item: VentanaCombos.platos){
+            String texto = item.getNombre()+", "+item.getPrecio();
+            System.out.println(texto);
+            model.addElement(texto);
+ 
+       }
+       jList1.setModel(model);
+       }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,19 +80,12 @@ public class VentanaTipoCombo extends javax.swing.JFrame {
         lblSeleccionarTipoCombo = new javax.swing.JLabel();
         lblComboPredeterminado = new javax.swing.JLabel();
         lblComboAlGusto = new javax.swing.JLabel();
-        radioButtonCombo1 = new javax.swing.JRadioButton();
-        radioButtonCombo2 = new javax.swing.JRadioButton();
-        radioButtonCombo3 = new javax.swing.JRadioButton();
-        radioButtonCombo4 = new javax.swing.JRadioButton();
-        radioButtonCombo5 = new javax.swing.JRadioButton();
         lblSeleccionarPlatoPrincipal = new javax.swing.JLabel();
-        radioButtonHamburguesa = new javax.swing.JRadioButton();
-        radioButtonSandwich = new javax.swing.JRadioButton();
-        radioButtonPollo = new javax.swing.JRadioButton();
-        radioButtonWrap = new javax.swing.JRadioButton();
-        radioButtonPizza = new javax.swing.JRadioButton();
-        radioButtonHotDog = new javax.swing.JRadioButton();
         btnSiguiente = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,108 +98,53 @@ public class VentanaTipoCombo extends javax.swing.JFrame {
         lblComboAlGusto.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         lblComboAlGusto.setText("Combo al gusto:");
 
-        buttonGroup1.add(radioButtonCombo1);
-        radioButtonCombo1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        radioButtonCombo1.setText("Combo 1: Hamburguesa, gaseosa, papas (2750)");
-        radioButtonCombo1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radioButtonCombo1ActionPerformed(evt);
-            }
-        });
-
-        buttonGroup1.add(radioButtonCombo2);
-        radioButtonCombo2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        radioButtonCombo2.setText("Combo 2: Pollo, gaseosa, papas (2550)");
-
-        buttonGroup1.add(radioButtonCombo3);
-        radioButtonCombo3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        radioButtonCombo3.setText("Combo 3: Hot dog, gaseosa, puré (2550)");
-
-        buttonGroup1.add(radioButtonCombo4);
-        radioButtonCombo4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        radioButtonCombo4.setText("Combo 4: Pizza, gaseosa (2000)");
-
-        buttonGroup1.add(radioButtonCombo5);
-        radioButtonCombo5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        radioButtonCombo5.setText("Combo 5: Pizza, gaseosa, ensalada, tres leches (3400)");
-
         lblSeleccionarPlatoPrincipal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblSeleccionarPlatoPrincipal.setText("Seleccione un plato principal");
 
-        buttonGroup1.add(radioButtonHamburguesa);
-        radioButtonHamburguesa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        radioButtonHamburguesa.setText("Hamburguesa (1200)");
-
-        buttonGroup1.add(radioButtonSandwich);
-        radioButtonSandwich.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        radioButtonSandwich.setText("Sandwich (900)");
-
-        buttonGroup1.add(radioButtonPollo);
-        radioButtonPollo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        radioButtonPollo.setText("Pollo (1000)");
-        radioButtonPollo.addActionListener(new java.awt.event.ActionListener() {
+        btnSiguiente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnSiguiente.setText("Siguiente");
+        btnSiguiente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radioButtonPolloActionPerformed(evt);
+                btnSiguienteActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(radioButtonWrap);
-        radioButtonWrap.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        radioButtonWrap.setText("Wrap (900)");
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(jList1);
 
-        buttonGroup1.add(radioButtonPizza);
-        radioButtonPizza.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        radioButtonPizza.setText("Pizza (1100)");
-
-        buttonGroup1.add(radioButtonHotDog);
-        radioButtonHotDog.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        radioButtonHotDog.setText("Hot dog (950)");
-
-        btnSiguiente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnSiguiente.setText("Siguiente");
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane4.setViewportView(jList2);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblComboPredeterminado))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblComboAlGusto))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblSeleccionarTipoCombo))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblSeleccionarPlatoPrincipal)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(radioButtonSandwich)
-                                    .addComponent(radioButtonHamburguesa)
-                                    .addComponent(radioButtonPollo))))
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(radioButtonPizza)
-                            .addComponent(radioButtonWrap)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(radioButtonHotDog)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                                .addComponent(btnSiguiente))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(radioButtonCombo5)
-                            .addComponent(radioButtonCombo1)
-                            .addComponent(radioButtonCombo2)
-                            .addComponent(radioButtonCombo3)
-                            .addComponent(radioButtonCombo4))))
-                .addGap(19, 19, 19))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(btnSiguiente)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblComboPredeterminado)
+                                        .addComponent(lblComboAlGusto)
+                                        .addComponent(lblSeleccionarTipoCombo))
+                                    .addGap(271, 271, 271)))
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,39 +153,17 @@ public class VentanaTipoCombo extends javax.swing.JFrame {
                 .addComponent(lblSeleccionarTipoCombo)
                 .addGap(29, 29, 29)
                 .addComponent(lblComboPredeterminado)
-                .addGap(18, 18, 18)
-                .addComponent(radioButtonCombo1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(radioButtonCombo2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(radioButtonCombo3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(radioButtonCombo4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(radioButtonCombo5)
-                .addGap(15, 15, 15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
                 .addComponent(lblComboAlGusto)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblSeleccionarPlatoPrincipal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(radioButtonHamburguesa)
-                    .addComponent(radioButtonWrap))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(radioButtonSandwich)
-                    .addComponent(radioButtonPizza))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(radioButtonPollo)
-                            .addComponent(radioButtonHotDog))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                        .addComponent(btnSiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnSiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -217,13 +180,28 @@ public class VentanaTipoCombo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void radioButtonCombo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioButtonCombo1ActionPerformed
+    private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_radioButtonCombo1ActionPerformed
-
-    private void radioButtonPolloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioButtonPolloActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_radioButtonPolloActionPerformed
+        if (!jList1.isSelectionEmpty() && !jList2.isSelectionEmpty()){
+            JOptionPane.showMessageDialog(this, "Debe escoger un combo o un plato principal");
+        }
+        else if(!jList1.isSelectionEmpty()){
+            VentanaAgregados va = new VentanaAgregados();
+            int index = jList1.getSelectedIndex();
+            va.combo = VentanaCombos.combos.get(index);
+            va.compra=compra;
+            va.setVisible(true);
+            this.setVisible(false);
+        }
+        else{
+           VentanaAgregados va = new VentanaAgregados();
+            int index = jList1.getSelectedIndex();
+            va.plato = VentanaCombos.platos.get(index);
+            va.compra= compra;
+            va.setVisible(true);
+            this.setVisible(false); 
+        }
+    }//GEN-LAST:event_btnSiguienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -250,7 +228,6 @@ public class VentanaTipoCombo extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(VentanaTipoCombo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -264,21 +241,14 @@ public class VentanaTipoCombo extends javax.swing.JFrame {
     private javax.swing.JButton btnSiguiente;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JLabel lblComboAlGusto;
     private javax.swing.JLabel lblComboPredeterminado;
     private javax.swing.JLabel lblSeleccionarPlatoPrincipal;
     private javax.swing.JLabel lblSeleccionarTipoCombo;
-    private javax.swing.JRadioButton radioButtonCombo1;
-    private javax.swing.JRadioButton radioButtonCombo2;
-    private javax.swing.JRadioButton radioButtonCombo3;
-    private javax.swing.JRadioButton radioButtonCombo4;
-    private javax.swing.JRadioButton radioButtonCombo5;
-    private javax.swing.JRadioButton radioButtonHamburguesa;
-    private javax.swing.JRadioButton radioButtonHotDog;
-    private javax.swing.JRadioButton radioButtonPizza;
-    private javax.swing.JRadioButton radioButtonPollo;
-    private javax.swing.JRadioButton radioButtonSandwich;
-    private javax.swing.JRadioButton radioButtonWrap;
     // End of variables declaration//GEN-END:variables
 }

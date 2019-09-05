@@ -13,7 +13,7 @@ package tareacombosfactory;
 //Los Productos que empiezan con 0 son platos principales
 //Los Productos que empiezan con 1 son bebidas
 //Los Productos que empiezan con 2 son adicionales
-public class Producto {
+public class Producto implements ICombo<Producto>{
     private  int codigo;
     private String nombre;
     private float precio;
@@ -42,5 +42,16 @@ public class Producto {
         this.precio=p;
     }
     
-    
+ 
+    @Override
+    public Producto clone() {
+        return new Producto(this.getCodigo(),this.getNombre(),this.getPrecio());
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Producto deepClone() {
+        return clone();
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }   
 }

@@ -12,7 +12,7 @@ import java.util.HashMap;
  * @author Gloriana
  */
 public class ComboFactory {
-    private static HashMap<Integer, ICombo> prototypes = new HashMap<>();
+    public static HashMap<Integer, ICombo> prototypes = new HashMap<>();
     
     public static ICombo getPrototype(Integer prototypeName){
         return prototypes.get(prototypeName).deepClone();

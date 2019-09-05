@@ -12,39 +12,52 @@ import java.util.ArrayList;
  * @author Gloriana
  */
 public class Combo {
-    private Plato plato;
-    private ArrayList<Bebida> bebidas;
-    private ArrayList<Adicional> adicionales;
+    private Producto plato;
+    private ArrayList<Producto> bebidas;
+    private ArrayList<Producto> adicionales;
+    private float total;
     
-    public Combo(Plato p, ArrayList<Bebida> b, ArrayList<Adicional> a){
+    public Combo(Producto p, ArrayList<Producto> b, ArrayList<Producto> a){
         this.plato=p;
         this.bebidas=b;
         this.adicionales=a;
+        setTotal();
     }
     public Combo(){}
-    public Plato getPlato(){
+    public Producto getPlato(){
         return plato;
     }
-    public ArrayList<Bebida> getBebidas(){
+    public ArrayList<Producto> getBebidas(){
         return bebidas;
     }
-        public ArrayList<Adicional> getAdicionales(){
+        public ArrayList<Producto> getAdicionales(){
         return adicionales;
     }
-    public void setPlato(Plato p){
+    public void setPlato(Producto p){
         this.plato=p;
     }
-    public void setBebidas(ArrayList<Bebida> b){
+    public void setBebidas(ArrayList<Producto> b){
         this.bebidas=b;
     }
-    public void setAdicionales (ArrayList<Adicional> a){
+    public void setAdicionales (ArrayList<Producto> a){
         this.adicionales=a;
     }
-    
+    public void setTotal(){
+        for(Producto item: this.bebidas){
+            this.total+=item.getPrecio();
+        }
+        for(Producto item: this.adicionales){
+            this.total+=item.getPrecio();
+        }
+        this.total+=this.plato.getPrecio();
+    }
+    public float getTotal(){
+        return this.total;
+    }
     public static class ComboBuilder implements IBuilder<Combo>{
-        private Plato plato;
-        private ArrayList<Bebida> bebidas;
-        private ArrayList<Adicional> adicionales;
+        private Producto plato;
+        private ArrayList<Producto> bebidas;
+        private ArrayList<Producto> adicionales;
         public ComboBuilder(){
         }
         @Override
@@ -53,16 +66,16 @@ public class Combo {
         }
         //Este es en caso de agregar bedidas y adicionales al combo
 
-        public ComboBuilder setPlato(Plato p){
+        public ComboBuilder setPlato(Producto p){
             this.plato=p;
             return this;
         }
         
-        public ComboBuilder addBebida(ArrayList<Bebida> b){
+        public ComboBuilder addBebida(ArrayList<Producto> b){
             this.bebidas.addAll(b);
             return this;}
         
-        public ComboBuilder addAdicional(ArrayList<Adicional> a){
+        public ComboBuilder addAdicional(ArrayList<Producto> a){
             this.adicionales.addAll(a);
             return this;
         }
@@ -71,6 +84,7 @@ public class Combo {
         public Combo build1(Combo combo1) {
             combo1.adicionales.addAll(adicionales);
             combo1.bebidas.addAll(bebidas);
+            combo1.setTotal();
             return combo1;
             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }

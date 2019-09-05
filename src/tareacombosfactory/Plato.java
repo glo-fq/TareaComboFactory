@@ -9,7 +9,7 @@ package tareacombosfactory;
  *
  * @author Gloriana
  */
-public class Plato extends Producto implements ICombo<Plato>
+public class Plato extends Producto 
 {
     public Plato(int codigo, String nombre, float precio){
             super(codigo,nombre,precio);
