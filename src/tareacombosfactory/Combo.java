@@ -56,8 +56,8 @@ public class Combo {
     }
     public static class ComboBuilder implements IBuilder<Combo>{
         private Producto plato;
-        private ArrayList<Producto> bebidas;
-        private ArrayList<Producto> adicionales;
+        private ArrayList<Producto> bebidas = new ArrayList<Producto>();
+        private ArrayList<Producto> adicionales= new ArrayList<Producto>();
         public ComboBuilder(){
         }
         @Override
@@ -72,12 +72,18 @@ public class Combo {
         }
         
         public ComboBuilder addBebida(ArrayList<Producto> b){
+            if (b==null){
+                return this;
+            }else{
             this.bebidas.addAll(b);
-            return this;}
+            return this;}}
         
         public ComboBuilder addAdicional(ArrayList<Producto> a){
-            this.adicionales.addAll(a);
-            return this;
+            if (a==null){
+                return this;
+            }else{
+                this.adicionales.addAll(a);
+                return this;}
         }
 
       

@@ -5,6 +5,9 @@
  */
 package tareacombosfactory;
 
+import Controlador.ControladorVentanaCombos;
+import interfaz.VentanaCombos;
+
 /**
  *
  * @author Gloriana
@@ -15,7 +18,12 @@ public class TareaCombosFactory {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO code application logic here        
+
+        VentanaCombos  vista = new VentanaCombos();
+        ControladorVentanaCombos controladorCombos = new ControladorVentanaCombos(vista);
+        controladorCombos.ventanaPrincipal.setVisible(true);
+      //  controladorCombos.ventanaPrincipal.setLocationRelativeTo(null);
     }
     
 }
