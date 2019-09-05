@@ -5,21 +5,96 @@
  */
 package interfaz;
 
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
+import tareacombosfactory.Bebida;
+import tareacombosfactory.Combo;
+import tareacombosfactory.ProductFactory;
+import tareacombosfactory.Producto;
+import tareacombosfactory.SupremeFactory;
 
 /**
  *
  * @author Gloriana
  */
 public class VentanaCombos extends javax.swing.JFrame {
-
+    public static ArrayList<Combo> combos;
+    public static ArrayList<Producto> platos;
+    public static ArrayList<Producto> bebidas;
+    public static ArrayList<Producto> adicionales;
+    public static ArrayList<Combo> compra;
     /**
      * Creates new form VentanaCombos
      */
     public VentanaCombos() {
+        ProductFactory factoryP = new ProductFactory();
+        Producto p1 =factoryP.crearProducto(01, "hamburguesa",1200);
+        Producto p2 =factoryP.crearProducto(02, "sandwich", 900);
+        Producto p3 =factoryP.crearProducto(03, "pollo",1000);
+        Producto p4 =factoryP.crearProducto(04, "wrap", 900);
+        Producto p5 =factoryP.crearProducto(05, "pizza", 1100);
+        Producto p6 =factoryP.crearProducto(06, "hot dog", 950);
+        platos = new ArrayList<Producto>();
+        platos.add(p1);platos.add(p2);platos.add(p3);platos.add(p4);platos.add(p5);platos.add(p6);
+        Producto b1 =factoryP.crearProducto(11, "gaseosa",900);
+        Producto b2 =factoryP.crearProducto(12, "té", 750);
+        Producto b3 =factoryP.crearProducto(13, "frozen",1100);
+        Producto b4 =factoryP.crearProducto(14, "café", 850);
+        Producto b5 =factoryP.crearProducto(15, "natural", 750);
+        Producto b6 =factoryP.crearProducto(16, "batido", 1000);
+        bebidas = new ArrayList<Producto>();
+        bebidas.add(b1);bebidas.add(b2);bebidas.add(b3);bebidas.add(b4);bebidas.add(b5);bebidas.add(b6);
+        Producto a1 =factoryP.crearProducto(21, "papas",650);
+        Producto a2 =factoryP.crearProducto(22, "patatas", 750);
+        Producto a3 =factoryP.crearProducto(23, "tres leches",750);
+        Producto a4 =factoryP.crearProducto(24, "puré", 700);
+        Producto a5 =factoryP.crearProducto(25, "uvas", 600);
+        Producto a6 =factoryP.crearProducto(26, "maíz", 700);
+        Producto a7 =factoryP.crearProducto(27,"ensalada",650);
+        adicionales = new ArrayList<Producto>();
+        adicionales.add(a1);adicionales.add(a2);adicionales.add(a3);adicionales.add(a4);adicionales.add(a5);adicionales.add(a6);adicionales.add(a7);
+        ArrayList<Producto> cb1 = new ArrayList<Producto>();
+        cb1.add(b1);
+        ArrayList<Producto> ca1 = new ArrayList<Producto>();
+        ca1.add(a1);
+        ArrayList<Producto> cb2 = new ArrayList<Producto>();
+        cb2.add(b1);
+        ArrayList<Producto> ca2 = new ArrayList<Producto>();
+        ca2.add(a1);
+        ArrayList<Producto> cb3 = new ArrayList<Producto>();
+        cb3.add(b3);
+        ArrayList<Producto> ca3 = new ArrayList<Producto>();
+        ca3.add(a5);
+        ArrayList<Producto> cb4 = new ArrayList<Producto>();
+        cb2.add(b2);
+        ArrayList<Producto> ca4 = new ArrayList<Producto>();
+        ca2.add(a7);
+        ca2.add(a3);
+        ArrayList<Producto> cb5 = new ArrayList<Producto>();
+        cb2.add(b5);
+        ArrayList<Producto> ca5 = new ArrayList<Producto>();
+        ca2.add(a2);
+        SupremeFactory factoryS = new SupremeFactory();
+        Combo c1= factoryS.crearCombo("predefinido", 0, p1, cb1, ca1, 0);
+        Combo c2= factoryS.crearCombo("predefinido", 0, p2, cb2, ca2, 1);
+        Combo c3= factoryS.crearCombo("predefinido", 0, p3, cb3, ca3, 2);
+        Combo c4= factoryS.crearCombo("predefinido", 0, p4, cb4, ca4, 3);
+        Combo c5= factoryS.crearCombo("predefinido", 0, p5, cb5, ca5, 4);
+        Combo c6= factoryS.crearCombo("predefinido", 0, p6, cb2, ca1, 5);
+        combos = new ArrayList<Combo>();
+        combos.add(c1);
+        combos.add(c2);
+        combos.add(c3);
+        combos.add(c4);
+        combos.add(c5);
+        combos.add(c6);
+        
         initComponents();
-    }
 
+    }
+    public void setCompra(ArrayList<Combo> c){
+        combos =c;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -67,7 +142,6 @@ public class VentanaCombos extends javax.swing.JFrame {
         txtAreaFactura.setEditable(false);
         txtAreaFactura.setColumns(20);
         txtAreaFactura.setRows(5);
-        txtAreaFactura.setText("Combo 1        3900\nHamburguesa    1200\nGaseosa         800\nCafé            500\nTres leches     800\nPuré            600\n\nCombo 2        2600\nHamburguesa    1200\nGaseosa         800\nPapas           600\n");
         jScrollPane2.setViewportView(txtAreaFactura);
 
         btnAgregar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -140,12 +214,19 @@ public class VentanaCombos extends javax.swing.JFrame {
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         // TODO add your handling code here:
+      VentanaTipoCombo vtc = new VentanaTipoCombo();
+       vtc.compra=compra; 
+        vtc.setVisible(true);
+        this.setVisible(false);
+        
     }//GEN-LAST:event_btnAgregarActionPerformed
-
+    ///PASAR AL CONTROLADOR 
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -168,7 +249,7 @@ public class VentanaCombos extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(VentanaCombos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
