@@ -9,6 +9,10 @@ package tareacombosfactory;
  *
  * @author Gloriana
  */
+
+//Los Productos que empiezan con 0 son platos principales
+//Los Productos que empiezan con 1 son bebidas
+//Los Productos que empiezan con 2 son adicionales
 public class Producto {
     private  int codigo;
     private String nombre;

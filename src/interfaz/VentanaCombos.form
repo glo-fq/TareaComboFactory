@@ -65,6 +65,7 @@
                                   <Component id="lblTotal" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
                                   <Component id="lblMontoTotal" min="-2" pref="99" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="jScrollPane2" min="-2" pref="381" max="-2" attributes="0"/>
@@ -76,6 +77,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+
                       </Group>
                   </Group>
                   <EmptySpace pref="39" max="32767" attributes="0"/>
@@ -139,7 +141,6 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="Combo 1        3900&#xa;Hamburguesa    1200&#xa;Gaseosa         800&#xa;Caf&#xe9;            500&#xa;Tres leches     800&#xa;Pur&#xe9;            600&#xa;&#xa;Combo 2        2600&#xa;Hamburguesa    1200&#xa;Gaseosa         800&#xa;Papas           600&#xa;"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
