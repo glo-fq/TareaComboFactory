@@ -13,5 +13,5 @@ import java.util.ArrayList;
  */
 public interface IComboFactoryMethod {
     
-    public Combo crearCombo(String tipo,Integer numCombo,Plato p, ArrayList<Bebida> b, ArrayList<Adicional> a, Integer newNumCombo);
+   public  Combo crearCombo(String tipo,Integer numCombo,Plato p, ArrayList<Bebida> b, ArrayList<Adicional> a, Integer newNumCombo);
 }
