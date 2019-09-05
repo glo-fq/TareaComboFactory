@@ -22,11 +22,15 @@ import tareacombosfactory.Producto;
  * @author Gloriana
  */
 public class VentanaTipoCombo extends javax.swing.JFrame {
-    ArrayList<Combo> compra;
+   // ArrayList<Combo> compra;
     /**
      * Creates new form VentanaTipoCombo
      */
-    public VentanaTipoCombo() {
+    private static ArrayList<Combo> combos;
+    private static ArrayList<Producto> platos;
+    public VentanaTipoCombo(ArrayList<Combo> combos,ArrayList<Producto> platos) {
+        this.combos=combos;
+        this.platos=platos;
         initComponents();
         añadirCombos();
         añadirPlatos();
@@ -38,7 +42,7 @@ public class VentanaTipoCombo extends javax.swing.JFrame {
     }
     public void añadirCombos(){
         DefaultListModel model = new DefaultListModel<>();
-        for (Combo item: VentanaCombos.combos){
+        for (Combo item: combos){
         String texto = item.getPlato().getNombre();
                 for (Producto b: item.getBebidas()){
                    texto+=", "+b.getNombre();
@@ -50,18 +54,18 @@ public class VentanaTipoCombo extends javax.swing.JFrame {
          model.addElement(texto);
      
         }
-        jList2.setModel(model);
+        jList1.setModel(model);
 
     }
     public void añadirPlatos(){
         DefaultListModel model = new DefaultListModel<>();
-        for (Producto item: VentanaCombos.platos){
+        for (Producto item: platos){
             String texto = item.getNombre()+", "+item.getPrecio();
             System.out.println(texto);
             model.addElement(texto);
  
        }
-       jList1.setModel(model);
+       jList2.setModel(model);
        }
     
     
@@ -155,12 +159,12 @@ public class VentanaTipoCombo extends javax.swing.JFrame {
                 .addComponent(lblComboPredeterminado)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblComboAlGusto)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblSeleccionarPlatoPrincipal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(btnSiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -182,7 +186,7 @@ public class VentanaTipoCombo extends javax.swing.JFrame {
 
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
         // TODO add your handling code here:
-        if (!jList1.isSelectionEmpty() && !jList2.isSelectionEmpty()){
+     /*   if (!jList1.isSelectionEmpty() && !jList2.isSelectionEmpty()){
             JOptionPane.showMessageDialog(this, "Debe escoger un combo o un plato principal");
         }
         else if(!jList1.isSelectionEmpty()){
@@ -200,7 +204,7 @@ public class VentanaTipoCombo extends javax.swing.JFrame {
             va.compra= compra;
             va.setVisible(true);
             this.setVisible(false); 
-        }
+        }*/
     }//GEN-LAST:event_btnSiguienteActionPerformed
 
     /**
@@ -232,17 +236,17 @@ public class VentanaTipoCombo extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentanaTipoCombo().setVisible(true);
+                new VentanaTipoCombo(combos,platos).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSiguiente;
+    public javax.swing.JButton btnSiguiente;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JList<String> jList2;
+    public javax.swing.JList<String> jList1;
+    public javax.swing.JList<String> jList2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;

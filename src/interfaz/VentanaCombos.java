@@ -18,16 +18,16 @@ import tareacombosfactory.SupremeFactory;
  * @author Gloriana
  */
 public class VentanaCombos extends javax.swing.JFrame {
-    public static ArrayList<Combo> combos;
+   /* public static ArrayList<Combo> combos;
     public static ArrayList<Producto> platos;
     public static ArrayList<Producto> bebidas;
     public static ArrayList<Producto> adicionales;
-    public static ArrayList<Combo> compra;
+    public static ArrayList<Combo> compra;*/
     /**
      * Creates new form VentanaCombos
      */
     public VentanaCombos() {
-        ProductFactory factoryP = new ProductFactory();
+       /* ProductFactory factoryP = new ProductFactory();
         Producto p1 =factoryP.crearProducto(01, "hamburguesa",1200);
         Producto p2 =factoryP.crearProducto(02, "sandwich", 900);
         Producto p3 =factoryP.crearProducto(03, "pollo",1000);
@@ -87,14 +87,14 @@ public class VentanaCombos extends javax.swing.JFrame {
         combos.add(c3);
         combos.add(c4);
         combos.add(c5);
-        combos.add(c6);
+        combos.add(c6);*/
         
         initComponents();
 
     }
-    public void setCompra(ArrayList<Combo> c){
+  /*  public void setCompra(ArrayList<Combo> c){
         combos =c;
-    }
+    }*/
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -106,6 +106,7 @@ public class VentanaCombos extends javax.swing.JFrame {
 
         btnPlato4 = new javax.swing.JButton();
         btnPlato8 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         lblTotal = new javax.swing.JLabel();
@@ -113,6 +114,7 @@ public class VentanaCombos extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         txtAreaFactura = new javax.swing.JTextArea();
         btnAgregar = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         btnPlato4.setText("Plato 3");
         btnPlato4.addActionListener(new java.awt.event.ActionListener() {
@@ -127,6 +129,8 @@ public class VentanaCombos extends javax.swing.JFrame {
                 btnPlato8ActionPerformed(evt);
             }
         });
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -152,42 +156,48 @@ public class VentanaCombos extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setText("Cancelar");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(lblTotal)
-                                .addGap(83, 83, 83)
-                                .addComponent(lblMontoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(lblTotal)
+                        .addGap(83, 83, 83)
+                        .addComponent(lblMontoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(186, 186, 186)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButton2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(35, 35, 35)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTotal)
-                    .addComponent(lblMontoTotal))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblTotal)
+                            .addComponent(lblMontoTotal))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -200,6 +210,8 @@ public class VentanaCombos extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        jPanel1.getAccessibleContext().setAccessibleName("+");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -214,10 +226,10 @@ public class VentanaCombos extends javax.swing.JFrame {
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         // TODO add your handling code here:
-      VentanaTipoCombo vtc = new VentanaTipoCombo();
+   /*   VentanaTipoCombo vtc = new VentanaTipoCombo();
        vtc.compra=compra; 
         vtc.setVisible(true);
-        this.setVisible(false);
+        this.setVisible(false);*/
         
     }//GEN-LAST:event_btnAgregarActionPerformed
     ///PASAR AL CONTROLADOR 
@@ -262,6 +274,8 @@ public class VentanaCombos extends javax.swing.JFrame {
     public javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnPlato4;
     private javax.swing.JButton btnPlato8;
+    private javax.swing.JButton jButton1;
+    public javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
