@@ -17,8 +17,8 @@ public class ProductFactory {
          //Esto lo que hace es sacar el primer digito del código
          String v = String.valueOf(codigo);
          int t= v.length();
-         Double desplazamiento= Math.pow(10, t-1);
-         Double numero1= codigo/desplazamiento;
+         int desplazamiento= Double.valueOf(Math.pow(10, t-1)).intValue();
+         int numero1= codigo/desplazamiento;
          if (numero1==0){
              return new Plato(codigo,nombre,precio);
          }
