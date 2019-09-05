@@ -33,38 +33,10 @@ public class VentanaCombos extends javax.swing.JFrame {
         btnPlato8 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         lblTotal = new javax.swing.JLabel();
         lblMontoTotal = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtAreaFactura = new javax.swing.JTextArea();
-        btnPredefinido2 = new javax.swing.JButton();
-        btnPredefinido1 = new javax.swing.JButton();
-        btnPredefinido3 = new javax.swing.JButton();
-        btnPredefinido4 = new javax.swing.JButton();
-        btnPredefinido5 = new javax.swing.JButton();
-        btnPlato1 = new javax.swing.JButton();
-        btnPlato2 = new javax.swing.JButton();
-        btnPlato3 = new javax.swing.JButton();
-        btnPlato5 = new javax.swing.JButton();
-        btnPlato6 = new javax.swing.JButton();
-        btnPlato7 = new javax.swing.JButton();
-        btnBebida1 = new javax.swing.JButton();
-        btnBebida2 = new javax.swing.JButton();
-        btnBebida3 = new javax.swing.JButton();
-        btnBebida4 = new javax.swing.JButton();
-        btnBebida5 = new javax.swing.JButton();
-        btnBebida6 = new javax.swing.JButton();
-        btnAdicional1 = new javax.swing.JButton();
-        btnAdicional2 = new javax.swing.JButton();
-        btnAdicional3 = new javax.swing.JButton();
-        btnAdicional4 = new javax.swing.JButton();
-        btnAdicional5 = new javax.swing.JButton();
-        btnAdicional6 = new javax.swing.JButton();
-        btnAdicional7 = new javax.swing.JButton();
         btnAgregar = new javax.swing.JButton();
 
         btnPlato4.setText("Plato 3");
@@ -86,18 +58,6 @@ public class VentanaCombos extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("ComboStar");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2.setText("Predefinidos");
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Plato principal");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setText("Bebidas");
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel5.setText("Adicionales");
-
         lblTotal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblTotal.setText("Total:");
 
@@ -109,174 +69,6 @@ public class VentanaCombos extends javax.swing.JFrame {
         txtAreaFactura.setRows(5);
         txtAreaFactura.setText("Combo 1        3900\nHamburguesa    1200\nGaseosa         800\nCafé            500\nTres leches     800\nPuré            600\n\nCombo 2        2600\nHamburguesa    1200\nGaseosa         800\nPapas           600\n");
         jScrollPane2.setViewportView(txtAreaFactura);
-
-        btnPredefinido2.setText("Predef 2");
-        btnPredefinido2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPredefinido2ActionPerformed(evt);
-            }
-        });
-
-        btnPredefinido1.setText("Predef 1");
-        btnPredefinido1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPredefinido1ActionPerformed(evt);
-            }
-        });
-
-        btnPredefinido3.setText("Predef 3");
-        btnPredefinido3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPredefinido3ActionPerformed(evt);
-            }
-        });
-
-        btnPredefinido4.setText("Predef 4");
-        btnPredefinido4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPredefinido4ActionPerformed(evt);
-            }
-        });
-
-        btnPredefinido5.setText("Predef 5");
-        btnPredefinido5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPredefinido5ActionPerformed(evt);
-            }
-        });
-
-        btnPlato1.setText("Hamburguesa");
-        btnPlato1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlato1ActionPerformed(evt);
-            }
-        });
-
-        btnPlato2.setText("Sandwich");
-        btnPlato2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlato2ActionPerformed(evt);
-            }
-        });
-
-        btnPlato3.setText("Pollo");
-        btnPlato3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlato3ActionPerformed(evt);
-            }
-        });
-
-        btnPlato5.setText("Wrap");
-        btnPlato5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlato5ActionPerformed(evt);
-            }
-        });
-
-        btnPlato6.setText("Pizza");
-        btnPlato6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlato6ActionPerformed(evt);
-            }
-        });
-
-        btnPlato7.setText("Hot dog");
-        btnPlato7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlato7ActionPerformed(evt);
-            }
-        });
-
-        btnBebida1.setText("Gaseosa");
-        btnBebida1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBebida1ActionPerformed(evt);
-            }
-        });
-
-        btnBebida2.setText("Café");
-        btnBebida2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBebida2ActionPerformed(evt);
-            }
-        });
-
-        btnBebida3.setText("Té");
-        btnBebida3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBebida3ActionPerformed(evt);
-            }
-        });
-
-        btnBebida4.setText("Natural");
-        btnBebida4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBebida4ActionPerformed(evt);
-            }
-        });
-
-        btnBebida5.setText("Frozen");
-        btnBebida5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBebida5ActionPerformed(evt);
-            }
-        });
-
-        btnBebida6.setText("Batido");
-        btnBebida6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBebida6ActionPerformed(evt);
-            }
-        });
-
-        btnAdicional1.setText("Papas");
-        btnAdicional1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdicional1ActionPerformed(evt);
-            }
-        });
-
-        btnAdicional2.setText("Uvas");
-        btnAdicional2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdicional2ActionPerformed(evt);
-            }
-        });
-
-        btnAdicional3.setText("Patatas");
-        btnAdicional3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdicional3ActionPerformed(evt);
-            }
-        });
-
-        btnAdicional4.setText("Maíz");
-        btnAdicional4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdicional4ActionPerformed(evt);
-            }
-        });
-
-        btnAdicional5.setText("Tres leches");
-        btnAdicional5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdicional5ActionPerformed(evt);
-            }
-        });
-
-        btnAdicional6.setText("Ensalada");
-        btnAdicional6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdicional6ActionPerformed(evt);
-            }
-        });
-
-        btnAdicional7.setText("Puré");
-        btnAdicional7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdicional7ActionPerformed(evt);
-            }
-        });
 
         btnAgregar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btnAgregar.setText("+");
@@ -290,151 +82,38 @@ public class VentanaCombos extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(418, 418, 418))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnBebida1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnBebida2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnBebida3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(btnPredefinido1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnPredefinido2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnPredefinido3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnPredefinido4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnPredefinido5, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(btnAdicional4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnAdicional5, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnAdicional6, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnAdicional7, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(52, 52, 52)
-                            .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnBebida4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnBebida5, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnBebida6, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel5)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnAdicional1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAdicional2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAdicional3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGap(35, 35, 35)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(lblTotal)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(83, 83, 83)
                                 .addComponent(lblMontoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnPlato1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnPlato5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btnPlato6, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btnPlato7, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(btnPlato2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btnPlato3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(29, 29, 29))))
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(186, 186, 186)
+                        .addComponent(jLabel1)))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnPlato2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPlato3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPlato1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnPlato5, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPlato6, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPlato7, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblTotal)
-                            .addComponent(lblMontoTotal))
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnPredefinido2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPredefinido3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPredefinido4, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPredefinido5, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPredefinido1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btnBebida1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnBebida2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnBebida3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btnBebida4, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnBebida5, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnBebida6, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(19, 19, 19)
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btnAdicional1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnAdicional2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnAdicional3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btnAdicional4, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnAdicional5, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnAdicional6, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnAdicional7, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(31, 31, 31)))
-                        .addGap(0, 15, Short.MAX_VALUE))))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTotal)
+                    .addComponent(lblMontoTotal))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -451,109 +130,13 @@ public class VentanaCombos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnPredefinido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPredefinido1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPredefinido1ActionPerformed
-
-    private void btnPredefinido2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPredefinido2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPredefinido2ActionPerformed
-
-    private void btnPredefinido3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPredefinido3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPredefinido3ActionPerformed
-
-    private void btnPredefinido4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPredefinido4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPredefinido4ActionPerformed
-
-    private void btnPredefinido5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPredefinido5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPredefinido5ActionPerformed
-
-    private void btnPlato1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlato1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPlato1ActionPerformed
-
-    private void btnPlato2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlato2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPlato2ActionPerformed
-
-    private void btnPlato3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlato3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPlato3ActionPerformed
-
     private void btnPlato4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlato4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnPlato4ActionPerformed
 
-    private void btnPlato5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlato5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPlato5ActionPerformed
-
-    private void btnPlato6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlato6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPlato6ActionPerformed
-
-    private void btnPlato7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlato7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPlato7ActionPerformed
-
     private void btnPlato8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlato8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnPlato8ActionPerformed
-
-    private void btnBebida1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBebida1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBebida1ActionPerformed
-
-    private void btnBebida2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBebida2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBebida2ActionPerformed
-
-    private void btnBebida3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBebida3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBebida3ActionPerformed
-
-    private void btnBebida4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBebida4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBebida4ActionPerformed
-
-    private void btnBebida5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBebida5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBebida5ActionPerformed
-
-    private void btnBebida6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBebida6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBebida6ActionPerformed
-
-    private void btnAdicional1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicional1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAdicional1ActionPerformed
-
-    private void btnAdicional2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicional2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAdicional2ActionPerformed
-
-    private void btnAdicional3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicional3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAdicional3ActionPerformed
-
-    private void btnAdicional4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicional4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAdicional4ActionPerformed
-
-    private void btnAdicional5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicional5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAdicional5ActionPerformed
-
-    private void btnAdicional6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicional6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAdicional6ActionPerformed
-
-    private void btnAdicional7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicional7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAdicional7ActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         // TODO add your handling code here:
@@ -595,43 +178,14 @@ public class VentanaCombos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAdicional1;
-    private javax.swing.JButton btnAdicional2;
-    private javax.swing.JButton btnAdicional3;
-    private javax.swing.JButton btnAdicional4;
-    private javax.swing.JButton btnAdicional5;
-    private javax.swing.JButton btnAdicional6;
-    private javax.swing.JButton btnAdicional7;
-    private javax.swing.JButton btnAgregar;
-    private javax.swing.JButton btnBebida1;
-    private javax.swing.JButton btnBebida2;
-    private javax.swing.JButton btnBebida3;
-    private javax.swing.JButton btnBebida4;
-    private javax.swing.JButton btnBebida5;
-    private javax.swing.JButton btnBebida6;
-    public javax.swing.JButton btnPlato1;
-    private javax.swing.JButton btnPlato2;
-    private javax.swing.JButton btnPlato3;
+    public javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnPlato4;
-    private javax.swing.JButton btnPlato5;
-    private javax.swing.JButton btnPlato6;
-    private javax.swing.JButton btnPlato7;
     private javax.swing.JButton btnPlato8;
-    private javax.swing.JButton btnPredefinido1;
-    private javax.swing.JButton btnPredefinido2;
-    private javax.swing.JButton btnPredefinido3;
-    private javax.swing.JButton btnPredefinido4;
-    private javax.swing.JButton btnPredefinido5;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel lblMontoTotal;
+    public javax.swing.JLabel lblMontoTotal;
     private javax.swing.JLabel lblTotal;
-    private javax.swing.JTextArea txtAreaFactura;
+    public javax.swing.JTextArea txtAreaFactura;
     // End of variables declaration//GEN-END:variables
 }
