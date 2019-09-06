@@ -29,6 +29,8 @@ public class ControladorVentanaAgregados implements ActionListener{
     public  ArrayList<Combo> compra;
     public Combo combo;
     public Producto plato;
+    public  ArrayList<Producto> bebidasCombo;
+    public  ArrayList<Producto> adicionalesCombo;
     
     public ControladorVentanaAgregados(VentanaAgregados v, ArrayList<Combo> com, ArrayList<Producto> p,ArrayList<Producto> b, ArrayList<Producto> a, ArrayList<Combo> c, Combo combo1, Producto plato1){
         this.vista=v;
@@ -39,6 +41,8 @@ public class ControladorVentanaAgregados implements ActionListener{
         this.compra=c;
         this.combo=combo1;
         this.plato=plato1;
+        this.bebidasCombo=new ArrayList<Producto>();
+        this.adicionalesCombo= new ArrayList<Producto>();
         this.vista.jButton1.addActionListener(this);
         this.vista.jButton14.addActionListener(this);
         this.vista.jButton2.addActionListener(this);
@@ -66,7 +70,7 @@ public class ControladorVentanaAgregados implements ActionListener{
         } 
         else{
             Producto b= bebidas.get(vista.jList1.getSelectedIndex());
-            bebidas.add(b);
+            bebidasCombo.add(b);
             JOptionPane.showMessageDialog(vista, "Bebida agregada con éxito");
         }
     }
@@ -76,7 +80,7 @@ public class ControladorVentanaAgregados implements ActionListener{
         } 
         else{
             Producto b= adicionales.get(vista.jList2.getSelectedIndex());
-            adicionales.add(b);
+            adicionalesCombo.add(b);
             JOptionPane.showMessageDialog(vista, "Adicional agregado con éxito");
         }
     }
@@ -84,16 +88,18 @@ public class ControladorVentanaAgregados implements ActionListener{
         SupremeFactory Sf = new SupremeFactory();
         if (plato==null){
            int numCombo = this.combos.indexOf(combo);
-           Combo c= Sf.crearCombo("cambio", numCombo, plato,bebidas, adicionales, 0);
+           Combo c= Sf.crearCombo("cambio", numCombo, combo.getPlato(),bebidasCombo, adicionalesCombo, 0);
            return c;
         }
         else{
-           Combo c= Sf.crearCombo("al gusto", 0, plato,bebidas, adicionales, 0); 
+           Combo c= Sf.crearCombo("al gusto", 0, plato,bebidasCombo, adicionalesCombo, 0); 
+           System.out.println(c.getTotal());
            return c;
         }
     }
     public void terminar(){
         Combo c = agregarFactory();
+        System.out.println(c.getPlato().getNombre());
         compra.add(c);
         llamarCombos();
     }

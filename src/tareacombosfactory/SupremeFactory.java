@@ -28,6 +28,7 @@ public class SupremeFactory implements IComboFactoryMethod {
             if (newNumCombo==0){
                ComboPredefinido predefinido = new ComboPredefinido(p,b,a);
                predefinido.setName(numCombo);
+               predefinido.setTotal();
                ComboFactory.addPrototype(newNumCombo, predefinido);
                return predefinido;
             }
@@ -37,6 +38,7 @@ public class SupremeFactory implements IComboFactoryMethod {
                 predefinido.setPlato(p);
                 predefinido.setAdicionales(a);
                 predefinido.setBebidas(b);
+                predefinido.setTotal();
                 ComboFactory.addPrototype(newNumCombo, predefinido);
                 return predefinido;}
         }

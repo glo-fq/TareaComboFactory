@@ -50,8 +50,12 @@ public class ControladorVentanaTipoCombo implements ActionListener {
        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     public void actualizarDatos(){
-        if (!vista.jList1.isSelectionEmpty() && !vista.jList2.isSelectionEmpty()){
-            JOptionPane.showMessageDialog(vista, "Debe escoger un combo o un plato principal");
+        if (!vista.jList2.isSelectionEmpty()){
+           int index = vista.jList2.getSelectedIndex();
+            plato= platos.get(index);
+     //       System.out.println(plato.getNombre());
+            llamarAgregados(index);
+
         }
         else if(!vista.jList1.isSelectionEmpty()){
             
@@ -60,10 +64,7 @@ public class ControladorVentanaTipoCombo implements ActionListener {
              llamarAgregados(index);
         }
         else{
-
-            int index = vista.jList2.getSelectedIndex();
-            plato= platos.get(index);
-            llamarAgregados(index);
+           JOptionPane.showMessageDialog(vista, "Debe escoger un combo o un plato principal");
 
         }
     }

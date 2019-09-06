@@ -16,6 +16,7 @@ public class ComboAlGusto extends Combo {
     }
     public Combo newCombo(Producto p, ArrayList<Producto> b, ArrayList<Producto> a){
         Combo ca= new Combo.ComboBuilder().setPlato(p).addAdicional(a).addBebida(b).build();
+        ca.setTotal();
         return ca;
     }
 }
