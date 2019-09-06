@@ -21,7 +21,7 @@ public class Combo {
         this.plato=p;
         this.bebidas=b;
         this.adicionales=a;
-        setTotal();
+       // setTotal();
     }
     public Combo(){}
     public Producto getPlato(){
@@ -43,22 +43,26 @@ public class Combo {
         this.adicionales=a;
     }
     public void setTotal(){
+        float t=0;
         for(Producto item: this.bebidas){
-            this.total+=item.getPrecio();
+            t+=item.getPrecio();
         }
         for(Producto item: this.adicionales){
-            this.total+=item.getPrecio();
+            t+=item.getPrecio();
         }
-        this.total+=this.plato.getPrecio();
+        t+=this.plato.getPrecio();
+        this.total=t;
     }
     public float getTotal(){
         return this.total;
     }
     public static class ComboBuilder implements IBuilder<Combo>{
         private Producto plato;
-        private ArrayList<Producto> bebidas = new ArrayList<Producto>();
-        private ArrayList<Producto> adicionales= new ArrayList<Producto>();
+        private ArrayList<Producto> bebidas;
+        private ArrayList<Producto> adicionales;
         public ComboBuilder(){
+            this.bebidas=new ArrayList<Producto>();
+            this.adicionales=new ArrayList<Producto>();
         }
         @Override
         public Combo build(){

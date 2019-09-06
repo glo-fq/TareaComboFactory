@@ -42,8 +42,9 @@ public class VentanaTipoCombo extends javax.swing.JFrame {
     }
     public void añadirCombos(){
         DefaultListModel model = new DefaultListModel<>();
+        String texto ="";
         for (Combo item: combos){
-        String texto = item.getPlato().getNombre();
+        texto = item.getPlato().getNombre();
                 for (Producto b: item.getBebidas()){
                    texto+=", "+b.getNombre();
                 }

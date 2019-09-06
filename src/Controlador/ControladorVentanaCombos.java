@@ -42,6 +42,7 @@ public class ControladorVentanaCombos implements ActionListener
         rellenarCombos();
         this.ventanaPrincipal.btnAgregar.addActionListener(this);
         this.ventanaPrincipal.jButton2.addActionListener(this);
+        this.ventanaPrincipal.llenarFactura(compra);
     }
     public void rellenarCombos(){
         ProductFactory factoryP = new ProductFactory();
@@ -83,14 +84,13 @@ public class ControladorVentanaCombos implements ActionListener
         ArrayList<Producto> ca3 = new ArrayList<Producto>();
         ca3.add(a5);
         ArrayList<Producto> cb4 = new ArrayList<Producto>();
-        cb2.add(b2);
+        cb4.add(b2);
         ArrayList<Producto> ca4 = new ArrayList<Producto>();
-        ca2.add(a7);
-        ca2.add(a3);
+        ca4.add(a7);
         ArrayList<Producto> cb5 = new ArrayList<Producto>();
-        cb2.add(b5);
+        cb4.add(b5);
         ArrayList<Producto> ca5 = new ArrayList<Producto>();
-        ca2.add(a2);
+        ca5.add(a2);
         SupremeFactory factoryS = new SupremeFactory();
         Combo c1= factoryS.crearCombo("predefinido", 0, p1, cb1, ca1, 0);
         Combo c2= factoryS.crearCombo("predefinido", 0, p2, cb2, ca2, 1);
@@ -112,9 +112,10 @@ public class ControladorVentanaCombos implements ActionListener
     public void actionPerformed(ActionEvent e) {
            switch(e.getActionCommand()) {
             case "+":
+               // validarSeleccion():
                 llamarTipoCombo();
                 break;
-            case "Cancelar":
+            case "Nueva Orden":
                 cancelar();
                 break;
             default:
@@ -123,6 +124,7 @@ public class ControladorVentanaCombos implements ActionListener
         }
        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
     public void llamarTipoCombo(){
        VentanaTipoCombo ventana2 = new VentanaTipoCombo(combos,platos);
        ControladorVentanaTipoCombo controladorTipoCombo = new ControladorVentanaTipoCombo(ventana2,this.combos,this.platos,this.bebidas,this.adicionales, this.compra);
@@ -136,7 +138,9 @@ public class ControladorVentanaCombos implements ActionListener
     
     public void cancelar(){
      //   System.out.println("Hola");
-        this.compra=null;
+        this.compra=new ArrayList<Combo>();
+        ventanaPrincipal.txtAreaFactura.setText("");
+        ventanaPrincipal.lblMontoTotal.setText("0");
     }
     
 }
