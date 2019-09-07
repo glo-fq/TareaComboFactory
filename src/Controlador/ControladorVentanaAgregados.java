@@ -13,6 +13,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import tareacombosfactory.Combo;
+import tareacombosfactory.ComboBuilder;
 import tareacombosfactory.Producto;
 import tareacombosfactory.SupremeFactory;
 
@@ -28,11 +29,9 @@ public class ControladorVentanaAgregados implements ActionListener{
     public  ArrayList<Producto> adicionales;
     public  ArrayList<Combo> compra;
     public Combo combo;
-    public Producto plato;
-    public  ArrayList<Producto> bebidasCombo;
-    public  ArrayList<Producto> adicionalesCombo;
+    public ComboBuilder comboBuilder;
     
-    public ControladorVentanaAgregados(VentanaAgregados v, ArrayList<Combo> com, ArrayList<Producto> p,ArrayList<Producto> b, ArrayList<Producto> a, ArrayList<Combo> c, Combo combo1, Producto plato1){
+    public ControladorVentanaAgregados(VentanaAgregados v, ArrayList<Combo> com, ArrayList<Producto> p,ArrayList<Producto> b, ArrayList<Producto> a, ArrayList<Combo> c, Combo combo1, ComboBuilder comboBuilder){
         this.vista=v;
         this.combos=com;
         this.bebidas=b;
@@ -40,9 +39,7 @@ public class ControladorVentanaAgregados implements ActionListener{
         this.adicionales=a;
         this.compra=c;
         this.combo=combo1;
-        this.plato=plato1;
-        this.bebidasCombo=new ArrayList<Producto>();
-        this.adicionalesCombo= new ArrayList<Producto>();
+        this.comboBuilder=comboBuilder;
         this.vista.jButton1.addActionListener(this);
         this.vista.jButton14.addActionListener(this);
         this.vista.jButton2.addActionListener(this);
@@ -69,8 +66,9 @@ public class ControladorVentanaAgregados implements ActionListener{
             JOptionPane.showMessageDialog(vista, "Debe seleccionar una bebida");
         } 
         else{
+            
             Producto b= bebidas.get(vista.jList1.getSelectedIndex());
-            bebidasCombo.add(b);
+            this.comboBuilder.addBebida(b);
             JOptionPane.showMessageDialog(vista, "Bebida agregada con éxito");
         }
     }
@@ -80,19 +78,20 @@ public class ControladorVentanaAgregados implements ActionListener{
         } 
         else{
             Producto b= adicionales.get(vista.jList2.getSelectedIndex());
-            adicionalesCombo.add(b);
+            this.comboBuilder.addAdicional(b);
             JOptionPane.showMessageDialog(vista, "Adicional agregado con éxito");
         }
     }
     public Combo agregarFactory(){
         SupremeFactory Sf = new SupremeFactory();
-        if (plato==null){
+        if (combo!=null){
            int numCombo = this.combos.indexOf(combo);
-           Combo c= Sf.crearCombo("cambio", numCombo, combo.getPlato(),bebidasCombo, adicionalesCombo, 0);
+        //   String tipo,Integer numCombo,Combo combo,ComboBuilder c, Integer newNumCombo, ArrayList<Producto> a, ArrayList<Producto> b, Producto p
+           Combo c= Sf.crearCombo("cambio", numCombo,combo, comboBuilder,-1, null,null, null);
            return c;
         }
         else{
-           Combo c= Sf.crearCombo("al gusto", 0, plato,bebidasCombo, adicionalesCombo, 0); 
+           Combo c= Sf.crearCombo("al gusto", 0, null,comboBuilder, -1, null,null,null); 
            System.out.println(c.getTotal());
            return c;
         }
