@@ -13,6 +13,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import tareacombosfactory.Combo;
+import tareacombosfactory.ComboBuilder;
 import tareacombosfactory.Producto;
 
 /**
@@ -27,7 +28,8 @@ public class ControladorVentanaTipoCombo implements ActionListener {
     public  ArrayList<Combo> compra;
     public VentanaTipoCombo vista;
     public Combo combo;
-    public Producto plato;
+   // public Producto plato;
+    public ComboBuilder ComboBuilder;
     
     public ControladorVentanaTipoCombo(VentanaTipoCombo ventana2, ArrayList<Combo> com,ArrayList<Producto> p, ArrayList<Producto> b, ArrayList<Producto> a, ArrayList<Combo> c){
         this.combos=com;
@@ -37,6 +39,7 @@ public class ControladorVentanaTipoCombo implements ActionListener {
         this.compra=c;
         this.vista=ventana2;
         this.vista.btnSiguiente.addActionListener(this);
+        this.ComboBuilder = new ComboBuilder();
     }
     @Override
     public void actionPerformed(ActionEvent e) {          
@@ -52,7 +55,8 @@ public class ControladorVentanaTipoCombo implements ActionListener {
     public void actualizarDatos(){
         if (!vista.jList2.isSelectionEmpty()){
            int index = vista.jList2.getSelectedIndex();
-            plato= platos.get(index);
+           Producto plato= platos.get(index);
+            this.ComboBuilder.setPlato(plato);
      //       System.out.println(plato.getNombre());
             llamarAgregados(index);
 
@@ -70,7 +74,7 @@ public class ControladorVentanaTipoCombo implements ActionListener {
     }
     public void llamarAgregados(int index){
        VentanaAgregados va = new VentanaAgregados(bebidas,adicionales);
-       ControladorVentanaAgregados controladorAgregados = new ControladorVentanaAgregados(va,combos,platos,bebidas,adicionales,compra,combo,plato);
+       ControladorVentanaAgregados controladorAgregados = new ControladorVentanaAgregados(va,combos,platos,bebidas,adicionales,compra,combo,ComboBuilder);
        controladorAgregados.vista.setVisible(true);
        controladorAgregados.vista.setLocationRelativeTo(null);
        this.vista.setVisible(false);

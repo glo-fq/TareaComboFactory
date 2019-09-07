@@ -13,8 +13,8 @@ import java.util.ArrayList;
  */
 public class Combo {
     private Producto plato;
-    private ArrayList<Producto> bebidas;
-    private ArrayList<Producto> adicionales;
+    ArrayList<Producto> bebidas;
+    ArrayList<Producto> adicionales;
     private float total;
     
     public Combo(Producto p, ArrayList<Producto> b, ArrayList<Producto> a){
@@ -56,48 +56,7 @@ public class Combo {
     public float getTotal(){
         return this.total;
     }
-    public static class ComboBuilder implements IBuilder<Combo>{
-        private Producto plato;
-        private ArrayList<Producto> bebidas;
-        private ArrayList<Producto> adicionales;
-        public ComboBuilder(){
-            this.bebidas=new ArrayList<Producto>();
-            this.adicionales=new ArrayList<Producto>();
-        }
-        @Override
-        public Combo build(){
-            return new Combo(plato, bebidas, adicionales);
-        }
-        //Este es en caso de agregar bedidas y adicionales al combo
-
-        public ComboBuilder setPlato(Producto p){
-            this.plato=p;
-            return this;
-        }
-        
-        public ComboBuilder addBebida(ArrayList<Producto> b){
-            if (b==null){
-                return this;
-            }else{
-            this.bebidas.addAll(b);
-            return this;}}
-        
-        public ComboBuilder addAdicional(ArrayList<Producto> a){
-            if (a==null){
-                return this;
-            }else{
-                this.adicionales.addAll(a);
-                return this;}
-        }
-
-      
-        public Combo build1(Combo combo1) {
-            combo1.adicionales.addAll(adicionales);
-            combo1.bebidas.addAll(bebidas);
-            combo1.setTotal();
-            return combo1;
-            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
+  
 
 
 
@@ -107,4 +66,4 @@ public class Combo {
         
     }
     
-}
+

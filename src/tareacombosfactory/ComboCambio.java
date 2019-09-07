@@ -15,8 +15,8 @@ public class ComboCambio extends Combo {
     public ComboCambio(){
     
     }
-    public Combo CambiarCombo(Combo c, ArrayList<Producto> b, ArrayList<Producto> a){
-         Combo ca = new Combo.ComboBuilder().addAdicional(a).addBebida(b).build1(c);
+    public Combo CambiarCombo(Combo c, ComboBuilder cb){
+         Combo ca =  cb.build1(c);
          ca.setTotal();
          return ca;
     }

@@ -92,12 +92,13 @@ public class ControladorVentanaCombos implements ActionListener
         ArrayList<Producto> ca5 = new ArrayList<Producto>();
         ca5.add(a2);
         SupremeFactory factoryS = new SupremeFactory();
-        Combo c1= factoryS.crearCombo("predefinido", 0, p1, cb1, ca1, 0);
-        Combo c2= factoryS.crearCombo("predefinido", 0, p2, cb2, ca2, 1);
-        Combo c3= factoryS.crearCombo("predefinido", 0, p3, cb3, ca3, 2);
-        Combo c4= factoryS.crearCombo("predefinido", 0, p4, cb4, ca4, 3);
-        Combo c5= factoryS.crearCombo("predefinido", 0, p5, cb5, ca5, 4);
-        Combo c6= factoryS.crearCombo("predefinido", 0, p6, cb2, ca1, 5);
+      //  String tipo,Integer numCombo,Combo combo,ComboBuilder c, Integer newNumCombo, ArrayList<Producto> a, ArrayList<Producto> b, Producto p
+        Combo c1= factoryS.crearCombo("predefinido", 0, null,null,0, ca1, cb1,p1);
+        Combo c2= factoryS.crearCombo("predefinido", 0,null,null,1 , ca2, cb2, p2);
+        Combo c3= factoryS.crearCombo("predefinido", 0,null,null,2, ca3, cb3, p3);
+        Combo c4= factoryS.crearCombo("predefinido", 0, null,null, 3, ca4, cb4, p4);
+        Combo c5= factoryS.crearCombo("predefinido", 0,null,null,4, ca5, cb5, p5);
+        Combo c6= factoryS.crearCombo("predefinido", 0,null,null,5, ca2, cb1, p6);
         combos = new ArrayList<Combo>();
         combos.add(c1);
         combos.add(c2);
