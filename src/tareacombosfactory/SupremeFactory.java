@@ -6,7 +6,7 @@
 package tareacombosfactory;
 
 import java.util.ArrayList;
-import tareacombosfactory.Combo.ComboBuilder;
+
 
 /**
  *
@@ -14,16 +14,18 @@ import tareacombosfactory.Combo.ComboBuilder;
  */
 public class SupremeFactory implements IComboFactoryMethod {
     
-    public Combo crearCombo(String tipo,Integer numCombo,Producto p, ArrayList<Producto> b, ArrayList<Producto> a, Integer newNumCombo){
+ 
+    
+    public Combo crearCombo(String tipo,Integer numCombo,Combo combo,ComboBuilder c, Integer newNumCombo, ArrayList<Producto> a, ArrayList<Producto> b, Producto p){
         if (tipo=="al gusto"){
            ComboAlGusto cg = new ComboAlGusto();
-           return cg.newCombo(p, b, a);
+           return cg.newCombo(c);
            
         }
         else if(tipo=="cambio"){
             ComboPredefinido predefinido = (ComboPredefinido) ComboFactory.getPrototype(numCombo);
             ComboCambio cc= new ComboCambio();
-            return cc.CambiarCombo(predefinido,b,a);
+            return cc.CambiarCombo(predefinido,c);
         }else {
             if (newNumCombo==0){
                ComboPredefinido predefinido = new ComboPredefinido(p,b,a);
